@@ -1,3 +1,36 @@
 *{
     box-sizing: border-box;
 }
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    
+}
+
+.dashboard{
+    flex: 1;
+    background-color: #1992D4;
+}
+
+.main{
+    flex: 5;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    background-color: white;
+    flex: 2;
+}
+
+.hero{
+    background-color: #E2E8F0;
+    flex: 7; 
+}
