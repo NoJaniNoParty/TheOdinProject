@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My final table</title>
     <style>
+
+       
+
        table{
         border-collapse: collapse;
        }
@@ -18,10 +21,17 @@
          #lighter{
             background-color: rgb(250, 250, 250);
          }
+     
+         
     </style>
 </head>
 <body>
     <table>
+        <colgroup>
+        <col span="2">
+        <col style="border: 3px solid black;">
+        <col span="9">
+        </colgroup>
         <caption>Data about the planets  of our solar system (Planetary facts taken from <a href="https://www.google.com/search?q=banana&oq=banana&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDYwMDFqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8">Nasa's Planetary Fact Sheet - Metric</a></caption>
         <thead>
             <td id="lighter" colspan="2"></td>
@@ -97,8 +107,21 @@
        <!-- jovian planets-->
         <tr>
             <th scope="rowgroup" rowspan="4" >Jovian planets</th>
-            <th scope="row" rowspan="2">Gas giants</th>
-            <td scope="row">Jupiter</td>
+            <th  rowspan="2">Gas giants</th>
+            <th scope="row">Jupiter</th>
+            <td>0.330</td>
+            <td>4.879</td>
+            <td>5427</td>
+            <td>3.7</td>
+            <td>4222.6</td>
+            <td>57.9</td>
+            <td>167</td>
+            <td>0</td>
+            <td>Closest to sun</td>
+            
+        </tr>
+        <tr>
+            <th scope="row">Saturn</th>
             <td>0.330</td>
             <td>4.879</td>
             <td>5427</td>
@@ -109,11 +132,90 @@
             <td>0</td>
             <td>Closest to sun</td>
         </tr>
+        <tr>
+           
+            <th  rowspan="2">Uranus</th>
+            <th scope="row">Jupiter</th>
+            <td>0.330</td>
+            <td>4.879</td>
+            <td>5427</td>
+            <td>3.7</td>
+            <td>4222.6</td>
+            <td>57.9</td>
+            <td>167</td>
+            <td>0</td>
+            <td>Closest to sun</td>
+            
+        </tr>
+        <tr>
+            <th scope="row">Neptune</th>
+            <td>0.330</td>
+            <td>4.879</td>
+            <td>5427</td>
+            <td>3.7</td>
+            <td>4222.6</td>
+            <td>57.9</td>
+            <td>167</td>
+            <td>0</td>
+            <td>Closest to sun</td>
+        </tr>
+        <tr>
+            <th scope="rowgroup" colspan="2">Dwarf planets</th>
+            <th scope="row">Pluto</th>
+            <td>0.330</td>
+            <td>4.879</td>
+            <td>5427</td>
+            <td>3.7</td>
+            <td>4222.6</td>
+            <td>57.9</td>
+            <td>167</td>
+            <td>0</td>
+            <td>Closest to sun</td>
+
+        </tr>
      
 
     
         
     </tbody>
     </table>
+
+    <form>
+        <fieldset>
+            <legend>Gas</legend>
+            <label for="ime">Ovdje upisi ime</label>
+            <input type="password" id="ime" placeholder="blabla" name="ime">
+            <textarea rows="10" cols="10">fklsdjklfjdslf</textarea>
+            <select name="fashion">
+                <optgroup label="Clothing">
+                  <option value="t_shirt">T-Shirts</option>
+                  <option value="sweater">Sweaters</option>
+                  <option value="coats">Coats</option>
+                </optgroup>
+                <optgroup label="Foot Wear">
+                  <option value="sneakers">Sneakers</option>
+                  <option value="boots">Boots</option>
+                  <option value="sandals">Sandals</option>
+                </optgroup>
+              </select>
+        </fieldset>
+      
+          <h1>Ticket Type</h1>
+<div>
+  <input type="radio" id="child" name="ticket_type" value="child">
+  <label for="child">Child</label>
+</div>
+
+<div>
+  <input type="radio" id="adult" name="ticket_type" value="adult" checked>
+  <label for="adult">Adult</label>
+</div>
+
+<div>
+  <input type="radio" id="senior" name="tickekjkt_type" value="senior">
+  <label for="senior">Senior</label>
+</div>
+
+    </form>
 </body>
 </html>
