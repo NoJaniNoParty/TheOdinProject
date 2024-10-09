@@ -52,5 +52,6 @@ h1{
 }
 
 .lightning{
-
+    box-shadow: 0 0 100px 50px rgb(10, 90, 174);
+    background-color: rgb(78, 78, 212);
 }

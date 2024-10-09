@@ -25,14 +25,20 @@ function randomizer(){
 
 function blinking(){
     
+    const images = document.querySelectorAll(".lighting");
+    images.forEach(image => {
+        image.classList.remove("lightning");
+    });
+
+
     if(".rock" === "." + computer){
-        document.querySelector(".rock").style.background = "red";
+        document.querySelector(".rock").classList.add("lightning");
     } 
     else if(".paper" === "." + computer){
-        document.querySelector(".paper").style.background = "red";
+        document.querySelector(".paper").classList.add("lightning");
     } 
     else
-        document.querySelector(".scissors").style.background = "red";
+        document.querySelector(".scissors").classList.add("lightning");
 
 
 }
