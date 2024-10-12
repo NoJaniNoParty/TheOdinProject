@@ -40,7 +40,7 @@
 
 .but{
     border: 1px solid black;
-    font-size: 2rem;
+    font-size: 2em;
     border-radius: 50%;
 }
 
@@ -56,6 +56,8 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    text-align: right;
+    
    
     padding: 0.25em;
     font-size: 3.5em;
