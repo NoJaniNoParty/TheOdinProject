@@ -3,7 +3,7 @@ let secondNum = null;
 let firstOperator = null;
 let secondOperator = null;
 let isOpActive = false;
-
+let isDotPresent = false;
 const buttons = document.querySelectorAll('.but');
 let display = document.querySelector('.numDisplay');
 
@@ -12,6 +12,7 @@ let display = document.querySelector('.numDisplay');
 function buttonClick(){
     buttons.forEach(e => {
         e.addEventListener("click", function (){
+            
             if(e.classList.contains('num')){
                 inputNumber(Number(e.value));
                 charLimit();
@@ -77,7 +78,6 @@ function inputNumber(number){
         
 
     }
-  
 }
 
 function inputOperator(operator){
@@ -98,18 +98,24 @@ function inputOperator(operator){
         firstOperator = secondOperator;
     }
   
+    isDotPresent = false;
     
     
 }
 
 function inputDot(){
-    display.value += '.';
+    if(isDotPresent !== true){
+        display.value += '.';
+        isDotPresent = true;
+    }
+   
 }
 
 function inputEquals(){
     if(secondNum !== null){
         firstNum = operate(Number(firstNum), Number(secondNum), firstOperator);
     }
+    isDotPresent = false;
     
 }
 
@@ -131,6 +137,11 @@ function inputClear(){
      secondOperator = null;
      display.value = '';
      isOpActive = false;
+     buttons.forEach(e => {
+        e.style.pointerEvents = 'auto';
+     });
+    
+     isDotPresent = false;
     
 }
 
@@ -176,7 +187,7 @@ function operate(a, b, op){
 }
 
 function charLimit(){
-    if(display.value.length > 3){
-        display.value = display.value.substr(0, 3);
+    if(display.value.length > 9){
+        display.value = display.value.substr(0, 9);
     }
 }
