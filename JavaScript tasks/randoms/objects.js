@@ -98,7 +98,7 @@ function sumOfTripledEvensOptimized(array){
 
 console.log(sumOfTripledEvensOptimized(myArray));
 */
-
+/*
  
 const inventors = [
     { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
@@ -154,9 +154,9 @@ const inventors = [
   const fifth = inventors.sort((a,b) => {
     const aGuy = a.passed - a.year;
     const bGuy = b.passed - b.year;
-    return aGuy > bGuy ? 1 : -1;
+    return aGuy > bGuy ? -1 : 1;
   });
-  console.table(fifth);
+  //console.table(fifth);
   // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
   // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
@@ -167,3 +167,72 @@ const inventors = [
   // 8. Reduce Exercise
   // Sum up the instances of each of these
   const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+*/
+/*
+const add = function(a,b) {
+	return a+b;
+};
+
+const subtract = function(a,b) {
+	return a-b;
+};
+
+const sum = function() {
+	Array.reduce((sum, num) =>{sum+num},0);
+};
+
+const multiply = function(a,b) {
+    return a*b;
+};
+
+const power = function() {
+	
+};
+
+const factorial = function() {
+	
+};
+
+// Do not edit below this line
+module.exports = {
+  add,
+  subtract,
+  sum,
+  multiply,
+  power,
+  factorial
+};
+
+*/
+/*
+const Book = {
+  title: "Hobbit",
+  author: "Tolkien",
+  pages: "214",
+  read: "not read yet",
+
+  info: function(){
+    return (this.title + ", " + this.author + ", " + this.pages + ", " + this.read);
+  }
+ 
+};
+
+console.log(Book.info());
+*/
+
+
+function Player(name, marker) {
+  this.name = name;
+  this.marker = marker;
+  this.sayName = function() {
+    console.log(this.name)
+  };
+}
+
+const player1 = new Player('steve', 'X');
+const player2 = new Player('also steve', 'O');
+
+Object.getPrototypeOf(Player.prototype) === Object.prototype; // true
+
+// Output may slightly differ based on the browser
+player1.valueOf(); // returns true
