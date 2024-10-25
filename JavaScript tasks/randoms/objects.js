@@ -219,7 +219,7 @@ const Book = {
 
 console.log(Book.info());
 */
-
+/*
 
 function Player(name, marker) {
   this.name = name;
@@ -236,3 +236,48 @@ Object.getPrototypeOf(Player.prototype) === Object.prototype; // true
 
 // Output may slightly differ based on the browser
 player1.valueOf(); // returns true
+*/
+function Grade(age){
+  this.age = age;
+}
+
+Grade.prototype.printAge = function(){
+  console.log('Hey, my age is: ' + this.age);
+};
+
+
+function Student(name, age){
+  this.name = name;
+  this.age = age;
+  
+  }
+
+Student.prototype.printName = function(){
+  console.log('Hey, my name is ' + this.name);
+};
+
+function Teacher(name){
+  this.name = name;
+}
+Student.prototype = Grade.prototype;
+Teacher.prototype = Grade.prototype;
+Teacher.prototype.printName = function() {
+  console.log('The kid named ' + this.name + ' is terrible');
+}
+  
+//Object.setPrototypeOf(Grade.prototype, Teacher.prototype);
+//Object.setPrototypeOf(Student.prototype, Grade.prototype);
+
+
+
+
+
+const student = new Student('luka', 50);
+const student2 = new Student('ante', 20);
+
+student.printName();
+student2.printName();
+
+student.printAge();
+student2.printAge();
+
