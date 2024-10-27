@@ -42,7 +42,7 @@ function render(){
     for(let i = 0; i < library.length; i++){
 
         let book = library[i];
-        let readButtonStyle = book.wasRead ? "background-color: red;" : "background-color: green;";
+        let readButtonStyle = book.wasRead ? "background-color: #B22222; border: 2px solid #B22222;" : "background-color: #458728; border: 2px solid #458728;";
         let readButtonText = book.wasRead ? "Read" : "Not Read Yet";
         let libEl = document.createElement("div");
         libEl.setAttribute("class", "book");
@@ -63,12 +63,6 @@ function addToLibrary(){
     let pages = document.querySelector("#pages").value;
     let wasRead = document.querySelector("#wasRead").checked;
 
-    if(wasRead.checked){
-        console.log("provjerena");
-    }
-    else{
-        console.log("nije dobra");
-    }
 
 
     let newBook = new Book(title, author, pages, wasRead);
@@ -88,7 +82,7 @@ newBookForm.addEventListener("submit", function (event){
    
 });
 
-function removeBook(index){
-    library.splice(index, 1);
+function removeBook(i){
+    library.splice(i, 1);
     render();
 }

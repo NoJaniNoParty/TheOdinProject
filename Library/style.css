@@ -2,7 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
+
+
+
 
 .container{
     display: flex;
@@ -12,6 +16,12 @@
     
 }
 
+body{
+    padding: 50px 0;
+    background-color: #F3F3E0;
+    font-family: 'Rubik', sans-serif;
+    
+}
 .center{
     display: flex;
     flex-direction: column;
@@ -27,16 +37,20 @@
 }
 
 .center > button{
-    width: 100px;
+    width: 200px;
     height: 100px;
-    background-color: rgb(64, 64, 146);
+    background-color: #608BC1;
     color: white;
+    border-radius: 10px;
+    border: 3px solid #133E87;
+    font-size: 2rem;
+
+
     
 }
 
 #library{
-    background-color: red;
-    
+    background-color: #608BC1;
     margin-top: 50px;
     width: 100%;
     padding: 50px;
@@ -45,9 +59,14 @@
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
     justify-content: space-around;
+    min-height: 600px;
+    border-radius: 20px;
+    border: 10px solid #133E87;
+
 }
+
 .book{
-    background-color: blue;
+    background-color: #CBDCEB;
     width: 300px;
     height: 200px;
     padding: 20px 10px;
@@ -60,8 +79,32 @@
                         "wasRead delete";
     text-align:  center;
     margin-bottom: 10px;
+    border: 5px solid #133E87;
+    border-radius: 10px;
+     color: #608BC1;
+     font-size: 1.5em;
 }
 
+.book > .wasRead{
+    color: #F3F3E0;
+    border-radius: 5px;
+    font-size: 0.7em;
+    
+}
+.book > .delete{
+    color: #608BC1;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.book > .delete:hover{
+    background-color: #b1bbc8;
+}
+
+.book > .delete:active{
+    background-color: rgb(165, 165, 165);
+}
 .title{
     grid-area: title;
 }
@@ -85,19 +128,47 @@ form{
    width: 50%;
    text-align: center;
    padding: 10px;
-   border: 3px solid green;
+   border: 6px solid #133E87;
    border-radius: 10px;
+   background-color: #608BC1;
+   font-size: 1.25em;
+   color: #F3F3E0;
 }
+
 
 input[type = text]{
     width: 100%;
     margin: 10px 0;
+    background-color: #CBDCEB;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #CBDCEB;
+    color: #133E87;
   
 
 }
 input[type = submit]{
-    width: 100%;
+    width: 50%;
     height: 50px;
     margin-top: 10px;
+    background-color: #133E87;
+    border-radius: 5px;
+    font-size: 1.1em;
+    border: 2px solid #133E87;
+    color: #F3F3E0;
+
+}
+
+input[type = submit]:hover{
+    background-color:#3262b5 ;
+
+}
+
+input[type = submit]:active{
+    background-color:#254c91 ;
+
+}
+input[type = checkbox]{
+    width: 100%;        
 
 }
