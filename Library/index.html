@@ -9,29 +9,28 @@
 <body>
     <div class="container">
         <div class="center">
-            <button type="button">Add a book</button>
-            <div class="library">
+            <button type="button" id="newFormButton">Add a book</button>
+            <form id="book-form" style="display: none;">
+                <label for="title">Title</label>
+                <input type="text" id="title">
+                <label for="author">author</label>
+                <input type="text" id="author">
+                <label for="pages">Pages</label>
+                <input type="text" id="pages">
+                <label for="wasRead">wasRead</label>
+                <input type="checkbox" id="wasRead">
+                <input type="submit" value="Add Book">
+
+            </form>
+            <div id="library">
                 <div class="book">
-                    <div class="title">title</div>
-                    <div class="author">sasa</div>
-                    <div class="pages">sasa</div>
-                    <div class="wasRead">sasa</div>
-                    <div class="delete">sasas</div> 
+                    <div class="title">The Hobbit</div>
+                    <div class="author">J.K.Rowling</div>
+                    <div class="pages">254</div>
+                    <button type="button">sasa</div>
+                    <button class="button">sasas</div> 
                 </div>
-                <div class="book">
-                    <div class="title">dsds</div>
-                    <div class="author">sasa</div>
-                    <div class="pages">sasa</div>
-                    <div class="wasRead">sasa</div>
-                    <div class="delete">sasas</div> 
-                </div>
-                <div class="book">
-                    <div class="title">dsds</div>
-                    <div class="author">sasa</div>
-                    <div class="pages">sasa</div>
-                    <div class="wasRead">sasa</div>
-                    <div class="delete">sasas</div> 
-                </div>
+                
             </div>
         </div>
     </div>
