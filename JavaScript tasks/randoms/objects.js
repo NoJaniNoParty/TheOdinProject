@@ -237,6 +237,8 @@ Object.getPrototypeOf(Player.prototype) === Object.prototype; // true
 // Output may slightly differ based on the browser
 player1.valueOf(); // returns true
 */
+
+/*
 function Grade(age){
   this.age = age;
 }
@@ -281,3 +283,52 @@ student2.printName();
 student.printAge();
 student2.printAge();
 
+*/
+/* destructuring with default value
+const {a = 19} = {a:18};
+console.log(a);
+
+*/
+/*
+const fruit = {name : 'banana', weight : 15, color : 'red', postal : 10360};
+
+const {name, color} = fruit;
+
+
+console.log(name, color);
+
+*/
+//factory function
+/*
+function createProduct(name, price){
+    const discoutPrice = price - 0.5;
+    let timesBought = 0;
+
+    const gettimesBought = () => timesBought;
+
+    const addtimesBought = () => timesBought++;
+
+    return {name, price, discoutPrice, gettimesBought, addtimesBought};
+}
+
+const milk = createProduct("milk", 25);
+
+milk.addtimesBought();
+milk.addtimesBought();
+
+console.log({discoutPrice : milk.discoutPrice, timesBought : milk.gettimesBought(), price : milk.price  });
+
+*/
+
+
+
+
+function Human(name, age){
+    this.name = name;
+    this.age = age;
+
+}
+
+const ante = new Human('ante', 17);
+
+console.log(ante.name, ante.age);
