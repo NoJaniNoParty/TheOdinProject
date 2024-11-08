@@ -322,7 +322,7 @@ console.log({discoutPrice : milk.discoutPrice, timesBought : milk.gettimesBought
 
 
 
-
+/*
 function Human(name, age){
     this.name = name;
     this.age = age;
@@ -331,4 +331,58 @@ function Human(name, age){
 
 const ante = new Human('ante', 17);
 
-console.log(ante.name, ante.age);
+console.log(ante.name, ante.age);*/
+
+function makeStudent(name){
+
+  const fullName = name + ' the student';
+
+  let num = 0;
+
+
+  const currentNum = function(){
+     return num;
+  }
+  const raiseNum = function(){
+    return ++num;
+  }
+
+  return{name, fullName, currentNum, raiseNum};
+
+}
+
+const daniel = makeStudent('danci');
+
+const carl = makeStudent('carl');
+
+
+console.log(daniel.currentNum());
+console.log(carl.currentNum());
+
+daniel.raiseNum();
+daniel.raiseNum();
+carl.raiseNum();
+daniel.fullName = carl.fullName;
+console.log(daniel.currentNum());
+console.log(carl.currentNum() + "/////////");
+
+console.log(carl.raiseNum());
+
+
+function createDumbStudent(name, age){
+  const{currentNum, raiseNum} = makeStudent(name);
+  const returnAge = function(){
+    return age;
+  }
+  const increaseAge = function(){
+    return ++age;
+  }
+  
+
+  return {name, increaseAge, currentNum, raiseNum, returnAge };
+}
+
+const dumbdaniel = createDumbStudent('dumb_danci', 5);
+dumbdaniel.increaseAge();
+console.log(dumbdaniel.returnAge(), dumbdaniel.increaseAge(), dumbdaniel.currentNum(),  dumbdaniel.raiseNum(), dumbdaniel.currentNum());
+
