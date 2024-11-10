@@ -5,7 +5,7 @@
         let box = document.querySelectorAll(".box");
         let popup = document.querySelector("#popup");
         const popupMessage = document.querySelector("#popup p:nth-child(2)");
-        popup.style.visibility = "hidden";
+        popup.style.visibility = "visible";
         
         const gameboardAr = [1,2,3,4,5,6,7,8,9];
         const conditions = [

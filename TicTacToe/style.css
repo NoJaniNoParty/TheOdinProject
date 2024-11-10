@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: #FA812F;
+    font-family: Rubik,sans-serif;
+}
 
 .container{
     width: 100%;
@@ -13,7 +17,7 @@
 }
 
 .game{
-    background-color: red;
+    background-color: #FEF3E2;
     width: 600px;
     height: 600px;
     display: grid;
@@ -27,6 +31,7 @@
     font-family: Rubik, sans-serif;
     font-size: 150px;
     text-align: center;
+    color: #FA4032;
 
    
 }
@@ -34,14 +39,61 @@
 #popup{
     position: fixed;
     width: 30%;
-    background-color: blue;
+    background-color: #FAB12F;
     height: 40vh;
     padding: 20px;
+    border-radius: 20px;
+   
+}
+
+.insider{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    border: 4px solid #FA812F;
+    border-radius: 20px;
+    height: 100%;
+    padding: 20px;  
+    color: white;
 }
+
+
+#prvi{
+    font-size: 2em;
+}
+#drugi{
+    font-size: 3em;
+}
+
+#playAgain{
+    width: 45%;
+    height: 30%;
+    background-color: #FA812F;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.5em;
+
+}
+
+#playAgain:hover{
+    background-color: #f99451;
+}
+#playAgain:active{
+    background-color: #FA812F;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .disabled{
     pointer-events: none;
@@ -59,46 +111,46 @@
 
 
 .luborder{
-    border: 4px solid black;
+    border: 4px solid #FA812F;
     border-top: none;
     border-left: none;
 }
 .ruborder{
-    border: 4px solid black;
+    border: 4px solid #FA812F;
     border-top: none;
     border-right: none;
 }
 
 .dlborder{
-    border: 4px solid black;
+    border: 4px solid #FA812F;
     border-left: none;
     border-bottom: none;
 }
 
 .drborder{
-    border: 4px solid black;
+    border: 4px solid #FA812F;
     border-right: none;
     border-bottom: none;
 }
 
 .upborder{
-    border-bottom: 4px solid black;
+    border-bottom: 4px solid #FA812F;
     
 }
 
 .leftborder{
-    border-right: 4px solid black;
+    border-right: 4px solid #FA812F;
     
 }
 
 .rightborder{
-    border-left: 4px solid black;
+    border-left: 4px solid #FA812F;
     
 }
 
 
 .botborder{
-    border-top: 4px solid black;
+    border-top: 4px solid #FA812F;
     
 }
 
