@@ -38,7 +38,7 @@ body{
 
 #popup{
     position: fixed;
-    width: 30%;
+    width: minmax(400px,30%);
     background-color: #FAB12F;
     height: 40vh;
     padding: 20px;
@@ -54,7 +54,7 @@ body{
     border: 4px solid #FA812F;
     border-radius: 20px;
     height: 100%;
-    padding: 20px;  
+    padding: 20px 10px;  
     color: white;
 }
 
@@ -63,7 +63,7 @@ body{
     font-size: 2em;
 }
 #drugi{
-    font-size: 3em;
+    font-size: 2.8em;
 }
 
 #playAgain{
@@ -84,24 +84,46 @@ body{
     background-color: #FA812F;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .disabled{
     pointer-events: none;
 }
 
 
 
+@media(max-width:700px){
+   .game{
+        width: 300px;
+        height: 300px;
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+   }
 
+   .box{
+    font-size: 75px;
+   }
+
+   #popup{
+
+    height: 20vh;
+    width: 250px;
+    padding: 15px;
+   }
+   #prvi{
+    font-size: 1em;
+   }
+   #drugi{
+    font-size: 1.3em;
+   }
+
+   #playAgain{
+    font-size: 0.8em;
+   }
+
+   .insider{
+    padding: 10px 0;
+   }
+}
 
 
 
