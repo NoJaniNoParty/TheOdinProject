@@ -332,7 +332,7 @@ function Human(name, age){
 const ante = new Human('ante', 17);
 
 console.log(ante.name, ante.age);*/
-
+/*
 function makeStudent(name){
 
   const fullName = name + ' the student';
@@ -351,7 +351,7 @@ function makeStudent(name){
 
 }
 
-const daniel = makeStudent('danci');
+  const daniel = makeStudent('danci');
 
 const carl = makeStudent('carl');
 
@@ -386,3 +386,74 @@ const dumbdaniel = createDumbStudent('dumb_danci', 5);
 dumbdaniel.increaseAge();
 console.log(dumbdaniel.returnAge(), dumbdaniel.increaseAge(), dumbdaniel.currentNum(),  dumbdaniel.raiseNum(), dumbdaniel.currentNum());
 
+*/
+/*
+const calculator = (function(){
+  const add = (a,b) => a+b;
+
+  return {add};
+
+})();
+
+
+const textCalculator = (function(){
+  const add = (a,b) => a + " " + b;
+
+  return {add}  ;
+})();
+
+
+
+console.log(calculator.add(2,7));
+
+console.log(textCalculator.add(2,7));
+
+
+const game = [0, 1, 2,
+           3, 4, 5,
+           6, 7 ,8
+          ];
+
+*/
+// CLASSES
+
+class Student{
+  constructor(name){this.name = name;}
+
+   printName(){
+      console.log(this.name);
+   }
+ }
+
+
+let student = new Student("ante");
+
+student.printName();
+
+const Teacher = class klasa{
+  constructor(name){this.name = name;}
+
+  printName(){
+     console.log(klasa);
+  }
+}
+//reachable
+new Teacher().printName();
+//not reachable
+//console.log(klasa);
+
+
+function makeClass(){
+  //class declaration and return
+  return class {
+    classMade(){
+      console.log("this shit has been made");
+    }
+  }
+
+}
+// this creates the new class
+let Newclass = makeClass();
+
+
+new Newclass().classMade();
