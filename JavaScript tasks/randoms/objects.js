@@ -416,7 +416,7 @@ const game = [0, 1, 2,
 
 */
 // CLASSES
-
+/*
 class Student{
   constructor(name){this.name = name;}
 
@@ -433,12 +433,24 @@ student.printName();
 const Teacher = class klasa{
   constructor(name){this.name = name;}
 
+  get name(){
+    return this._name;
+  }
+  set name(value){
+    if(value.length > 4){
+      alert("Veci od 4");
+      return;
+    }
+    this._name = value;
+  }
   printName(){
-     console.log(klasa);
+     console.log(this.name);
   }
 }
 //reachable
-new Teacher().printName();
+
+let ivan = new Teacher("iva");
+ivan.printName();
 //not reachable
 //console.log(klasa);
 
@@ -457,3 +469,77 @@ let Newclass = makeClass();
 
 
 new Newclass().classMade();
+
+class Movie{
+  name = prompt("Give me your name!");
+}
+
+function giveMovie(){
+  return new Movie;
+}
+
+let bumba = prompt("Give bumba");
+if(bumba < 5){
+  let bambi = giveMovie();
+  console.log(bambi.name);
+}
+
+
+class Button {
+  constructor(value) {
+    this.value = value;
+  }
+
+  click = ()  => {
+    alert(this.value);
+  }
+}
+
+let button = new Button("hello");
+
+setTimeout(button.click, 1000); // undefined
+*/
+
+
+class Clock{
+ 
+
+  constructor({template}){
+    this.template = template;
+  }
+
+  render() {
+    let date = new Date();
+  
+    let hours = date.getHours();
+    if (hours < 10) hours = '0' + hours;
+
+    let mins = date.getMinutes();
+    if (mins < 10) mins = '0' + mins;
+
+    let secs = date.getSeconds();
+    if (secs < 10) secs = '0' + secs;
+
+    let output = this.template
+          .replace('h', hours)
+          .replace('m', mins)
+          .replace('s', secs);
+
+    console.log(output);
+  }
+    stop() {
+      clearInterval(this.timer);
+    }
+  
+    start() {
+      this.render();
+      this.timer = setInterval(() => this.render(), 1000);
+    }
+}
+
+  
+let clock = new Clock({template: 's:m:h'});
+clock.start();
+
+
+
